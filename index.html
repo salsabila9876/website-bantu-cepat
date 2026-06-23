@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>BantuCepat - Portal Pertolongan Pertama & Etika Tanggap Darurat</title>
+    <meta name="description" content="Edukasi pertolongan pertama interaktif untuk berbagai kecelakaan dengan mengutamakan etika, privasi, dan empati kepada korban.">
+    <meta name="keywords" content="pertolongan pertama, etika darurat, P3K, RJP, kecelakaan, pertolongan pertama indonesia, empati korban">
+    <meta name="author" content="BantuCepat Team">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Decor (Blur circles) -->
+    <div class="decor-circle decor-1"></div>
+    <div class="decor-circle decor-2"></div>
+    <div class="decor-circle decor-3"></div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="url(#logo-grad)"/>
+                    <path d="M12 7v6M9 10h6" stroke="var(--logo-cross, #FFFFFF)" stroke-width="2" stroke-linecap="round"/>
+                    <defs>
+                        <linearGradient id="logo-grad" x1="2" y1="3" x2="22" y2="21" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="var(--logo-stop1, #00F5D4)"/>
+                            <stop offset="1" stop-color="var(--logo-stop2, #00B4D8)"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>Bantu<span class="highlight">Cepat</span></span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="#panduan" class="nav-link">Panduan P3K</a>
+                <a href="#etika" class="nav-link">Etika & Empati</a>
+                <a href="#simulator" class="nav-link">Simulator Kuis</a>
+                <a href="#kontak" class="nav-link">Hotline Darurat</a>
+            </nav>
+            
+            <div class="nav-cta">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Ubah Tema">
+                    <!-- Moon Icon (shows in Light Theme to toggle Dark) -->
+                    <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <!-- Sun Icon (shows in Dark Theme to toggle Light) -->
+                    <svg class="theme-icon sun-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <a href="#kontak" class="btn btn-emergency-pulse">
+                    <span>SOS 112</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="badge">RESPONS CEPAT • TINDAKAN TEPAT • SENTUHAN EMPATI</div>
+                <h1>Pertolongan Pertama dengan <span class="text-gradient">Etika & Kepedulian</span></h1>
+                <p class="hero-desc">
+                    Saat kecelakaan terjadi, tindakan medis yang tepat sangat penting. Namun, menjaga kehormatan, ketenangan psikologis, dan privasi korban adalah wujud empati kemanusiaan yang sejati.
+                </p>
+                
+                <!-- Search Bar -->
+                <div class="search-box-wrapper">
+                    <div class="search-box">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" id="search-input" placeholder="Cari kasus kecelakaan... (cth: Luka bakar, pingsan, tersedak)">
+                        <button class="btn btn-search" id="search-btn">Cari</button>
+                    </div>
+                    <div class="search-tags">
+                        <span>Pencarian Populer:</span>
+                        <button class="tag-btn" data-search="RJP">RJP (Luka Jantung)</button>
+                        <button class="tag-btn" data-search="Luka Bakar">Luka Bakar</button>
+                        <button class="tag-btn" data-search="Tersedak">Tersedak</button>
+                        <button class="tag-btn" data-search="Patah Tulang">Patah Tulang</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Golden Rules Banner -->
+        <section class="golden-rules-section">
+            <h2 class="section-title text-center">3 Aturan Emas Tanggap Darurat</h2>
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <div class="rule-num">01</div>
+                    <div class="rule-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Amankan Lingkungan</h3>
+                    <p>Pastikan diri Anda sendiri aman terlebih dahulu sebelum mendekati korban. Amankan korban dari bahaya susulan (seperti api, arus listrik, atau lalu lintas jalan).</p>
+                </div>
+                
+                <div class="rule-card">
+                    <div class="rule-num">02</div>
+                    <div class="rule-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                    </div>
+                    <h3>Hubungi Bantuan (112)</h3>
+                    <p>Segera hubungi nomor darurat atau minta orang sekitar untuk memanggil bantuan medis profesional. Sebutkan lokasi pasti, jenis kecelakaan, dan kondisi korban secara singkat.</p>
+                </div>
+                
+                <div class="rule-card">
+                    <div class="rule-num">03</div>
+                    <div class="rule-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                    <h3>Tolong dengan Etika</h3>
+                    <p>Beri bantuan darurat sesuai kemampuan Anda. Minta izin jika korban sadar, jaga privasinya (tidak merekam/memotret), dan beri dukungan psikologis yang menenangkan.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- First Aid Guides Catalog -->
+        <section id="panduan" class="guides-section">
+            <div class="section-header">
+                <h2>Katalog Pertolongan Pertama</h2>
+                <p>Klik kategori kasus kecelakaan di bawah ini untuk melihat langkah pertolongan medis serta panduan etika/empati yang sesuai.</p>
+            </div>
+            
+            <div class="guides-grid" id="guides-container">
+                <!-- Card 1 -->
+                <div class="guide-card" data-category="pingsan" onclick="openGuideModal('pingsan')">
+                    <div class="guide-card-header">
+                        <div class="guide-card-icon rjp">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </div>
+                        <span class="guide-badge urgent">Sangat Penting</span>
+                    </div>
+                    <h3>Pingsan & RJP (Henti Jantung)</h3>
+                    <p>Cara memeriksa kesadaran, melancarkan napas, dan panduan melakukan kompresi dada (RJP/CPR) dengan benar.</p>
+                    <div class="guide-card-footer">
+                        <span>Lihat Langkah & Etika</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="guide-card" data-category="luka-bakar" onclick="openGuideModal('luka-bakar')">
+                    <div class="guide-card-header">
+                        <div class="guide-card-icon burn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+                            </svg>
+                        </div>
+                        <span class="guide-badge medium">Sedang</span>
+                    </div>
+                    <h3>Luka Bakar</h3>
+                    <p>Penanganan pertama kulit yang terpapar suhu tinggi/api. Cara mendinginkan dan hal-hal tabu yang dilarang.</p>
+                    <div class="guide-card-footer">
+                        <span>Lihat Langkah & Etika</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="guide-card" data-category="tersedak" onclick="openGuideModal('tersedak')">
+                    <div class="guide-card-header">
+                        <div class="guide-card-icon choke">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+                                <path d="M12 6v6m0 4h.01"/>
+                            </svg>
+                        </div>
+                        <span class="guide-badge urgent">Sangat Penting</span>
+                    </div>
+                    <h3>Tersedak (Choking)</h3>
+                    <p>Membantu membebaskan sumbatan jalan napas pada orang dewasa atau anak-anak dengan Manuver Heimlich.</p>
+                    <div class="guide-card-footer">
+                        <span>Lihat Langkah & Etika</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="guide-card" data-category="patahatulang" onclick="openGuideModal('patahatulang')">
+                    <div class="guide-card-header">
+                        <div class="guide-card-icon bone">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="2" rx="1"/>
+                                <path d="M6 12v6a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-6"/>
+                                <path d="M18 12V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v6"/>
+                            </svg>
+                        </div>
+                        <span class="guide-badge medium">Sedang</span>
+                    </div>
+                    <h3>Patah Tulang & Terkilir</h3>
+                    <p>Cara meminimalisir gerakan korban (imobilisasi) dan melakukan pembidaian sederhana dengan bahan sekitar.</p>
+                    <div class="guide-card-footer">
+                        <span>Lihat Langkah & Etika</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="guide-card" data-category="pendarahan" onclick="openGuideModal('pendarahan')">
+                    <div class="guide-card-header">
+                        <div class="guide-card-icon blood">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-13-7-13S5 10.7 5 15a7 7 0 0 0 7 7z"/>
+                            </svg>
+                        </div>
+                        <span class="guide-badge urgent">Sangat Penting</span>
+                    </div>
+                    <h3>Pendarahan Hebat</h3>
+                    <p>Metode penekanan luka secara langsung (direct pressure) dan meninggikan bagian tubuh untuk meredakan darah.</p>
+                    <div class="guide-card-footer">
+                        <span>Lihat Langkah & Etika</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="guide-card" data-category="sengatan-listrik" onclick="openGuideModal('sengatan-listrik')">
+                    <div class="guide-card-header">
+                        <div class="guide-card-icon electric">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                            </svg>
+                        </div>
+                        <span class="guide-badge urgent">Sangat Penting</span>
+                    </div>
+                    <h3>Sengatan Listrik</h3>
+                    <p>Langkah memutus arus listrik tanpa membahayakan diri Anda sendiri, dan penanganan luka bakar akibat sengatan.</p>
+                    <div class="guide-card-footer">
+                        <span>Lihat Langkah & Etika</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="search-no-results hidden" id="no-results">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="48" height="48">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                </svg>
+                <h3>Kasus tidak ditemukan</h3>
+                <p>Silakan coba kata kunci lain atau pilih dari kategori populer di atas.</p>
+            </div>
+        </section>
+
+        <!-- Ethics & Empathy Portal -->
+        <section id="etika" class="ethics-section">
+            <div class="section-header text-center">
+                <div class="badge">ETIKA PENOLONG</div>
+                <h2>Menolong dengan Hormat & Empati</h2>
+                <p class="section-subtitle">
+                    Kecelakaan adalah momen krisis fisik dan mental bagi korban. Cara kita memperlakukan korban menentukan kualitas kemanusiaan kita.
+                </p>
+            </div>
+
+            <!-- Flip Cards of Do's & Don'ts -->
+            <div class="ethics-container">
+                <div class="ethics-grid">
+                    <!-- Card 1 -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="card-front-icon text-green">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="40" height="40">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                </div>
+                                <h3>Minta Izin & Komunikasi</h3>
+                                <p class="click-hint">Sentuh untuk melihat detail etika</p>
+                            </div>
+                            <div class="flip-card-back bg-green-dark">
+                                <h4>Mintalah Persetujuan (Consent)</h4>
+                                <p>Jika korban sadar, perkenalkan diri Anda dan tanyakan: <em>"Nama saya [X], saya paham pertolongan pertama, bolehkah saya membantu Anda?"</em></p>
+                                <p class="ethics-detail">Jika korban tidak sadar, persetujuan diasumsikan ada demi penyelamatan nyawa. Selalu ajak bicara korban meskipun terlihat pingsan.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="card-front-icon text-red">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="40" height="40">
+                                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                                    </svg>
+                                </div>
+                                <h3>Jaga Privasi & Stop Konten</h3>
+                                <p class="click-hint">Sentuh untuk melihat detail etika</p>
+                            </div>
+                            <div class="flip-card-back bg-red-dark">
+                                <h4>Lindungi Martabat Korban</h4>
+                                <p class="warning-text">Jangan merekam, memotret, atau membagikan kondisi korban kecelakaan ke media sosial.</p>
+                                <p class="ethics-detail">Gunakan tubuh Anda, pakaian, atau payung untuk menutupi korban dari pandangan warga yang memotret demi privasi dan rasa kemanusiaan korban.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="card-front-icon text-blue">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="40" height="40">
+                                        <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/>
+                                        <path d="M12 7v5l3 3"/>
+                                    </svg>
+                                </div>
+                                <h3>Ketenangan Psikologis</h3>
+                                <p class="click-hint">Sentuh untuk melihat detail etika</p>
+                            </div>
+                            <div class="flip-card-back bg-blue-dark">
+                                <h4>Dukungan Emosional</h4>
+                                <p>Korban yang panik akan mengalami syok fisik yang lebih parah. Katakan kalimat yang menenangkan dengan nada tenang:</p>
+                                <p class="ethics-quote">"Tenang, Anda aman sekarang. Saya sudah memanggil ambulans dan akan menemani Anda."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="card-front-icon text-yellow">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="40" height="40">
+                                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                    </svg>
+                                </div>
+                                <h3>Ketahui Batasan Diri</h3>
+                                <p class="click-hint">Sentuh untuk melihat detail etika</p>
+                            </div>
+                            <div class="flip-card-back bg-yellow-dark">
+                                <h4>Jangan Melebihi Batas</h4>
+                                <p>Jika Anda tidak yakin cara memindahkan korban patah tulang leher, <strong>jangan lakukan</strong>. Tindakan yang salah bisa mengakibatkan kelumpuhan permanen.</p>
+                                <p class="ethics-detail">Etika terbaik kadang adalah mengamankan lokasi, menemani korban secara psikologis, dan menunggu tenaga medis ahli.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Case Simulator (Quiz) -->
+        <section id="simulator" class="simulator-section">
+            <div class="section-header text-center">
+                <div class="badge">INTERAKTIF</div>
+                <h2>Simulator Tanggap Darurat</h2>
+                <p class="section-subtitle">
+                    Uji kesiapan mental, tindakan medis, dan kepekaan etika Anda melalui skenario darurat interaktif di bawah ini.
+                </p>
+            </div>
+
+            <div class="simulator-card">
+                <!-- Start Screen -->
+                <div id="sim-start-screen" class="sim-screen">
+                    <div class="sim-illustration">
+                        <svg viewBox="0 0 100 100" class="pulse-illustration" width="120" height="120">
+                            <circle cx="50" cy="50" r="40" fill="rgba(0, 245, 212, 0.1)" stroke="url(#cyan-grad)" stroke-width="2" class="outer-ring"/>
+                            <path d="M30 50h10l5-15 7 30 5-20 5 5h8" stroke="#00F5D4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" class="heart-pulse"/>
+                            <defs>
+                                <linearGradient id="cyan-grad" x1="10" y1="10" x2="90" y2="90">
+                                    <stop stop-color="#00F5D4"/>
+                                    <stop offset="1" stop-color="#00B4D8"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Siap Uji Kepedulian & Keahlian Anda?</h3>
+                    <p>Anda akan dihadapkan pada 4 skenario darurat nyata di jalanan. Jawaban Anda dinilai berdasarkan ketepatan tindakan medis DAN kepatuhan terhadap etika penolong.</p>
+                    <button class="btn btn-primary btn-large" onclick="startSimulation()">Mulai Simulasi</button>
+                </div>
+
+                <!-- Quiz Screen (Hidden initially) -->
+                <div id="sim-quiz-screen" class="sim-screen hidden">
+                    <div class="quiz-header">
+                        <div class="quiz-progress-wrapper">
+                            <span class="quiz-progress-text">Skenario <span id="current-q">1</span> dari <span id="total-q">4</span></span>
+                            <div class="progress-bar-bg">
+                                <div id="progress-bar-fill" class="progress-bar-fill" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                        <div class="quiz-score-badge">
+                            Skor: <span id="current-score">0</span>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-question-wrapper">
+                        <div class="quiz-scenario-badge" id="question-scenario">SKENARIO: KECELAKAAN JALANAN</div>
+                        <h3 id="question-text">Bagaimana tindakan pertama Anda jika melihat pengendara motor terjatuh di jalan raya dan berdarah?</h3>
+                    </div>
+
+                    <div class="quiz-options" id="quiz-options-container">
+                        <!-- Options dynamically loaded here -->
+                    </div>
+
+                    <!-- Feedback block (Hidden initially) -->
+                    <div id="quiz-feedback" class="quiz-feedback-box hidden">
+                        <div class="feedback-status-header">
+                            <span id="feedback-icon">✓</span>
+                            <span id="feedback-title">Tepat Sekali!</span>
+                        </div>
+                        <p id="feedback-text">Memastikan keamanan lingkungan (Safety First) adalah aturan paling utama sebelum menolong siapapun agar penolong tidak ikut menjadi korban.</p>
+                        <button class="btn btn-primary" id="btn-next-question" onclick="nextQuestion()">Skenario Berikutnya</button>
+                    </div>
+                </div>
+
+                <!-- Result Screen (Hidden initially) -->
+                <div id="sim-result-screen" class="sim-screen hidden">
+                    <div class="result-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="80" height="80">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h2>Simulasi Selesai!</h2>
+                    <p class="result-badge-text">Gelar Tanggap Darurat Anda:</p>
+                    <div class="result-badge" id="result-badge-title">Penolong Empatis Terampil</div>
+                    <p class="result-desc" id="result-description">Luar biasa! Anda memahami langkah medis dasar dengan baik sekaligus menunjukkan kepedulian yang sangat tinggi terhadap etika dan privasi korban.</p>
+                    <div class="result-stats">
+                        <div class="stat-box">
+                            <span class="stat-num" id="final-score">100</span>
+                            <span class="stat-label">Total Skor</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num" id="correct-answers">4/4</span>
+                            <span class="stat-label">Jawaban Tepat</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline" onclick="restartSimulation()">Ulangi Simulasi</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Directory & Checklist -->
+        <section id="kontak" class="emergency-section">
+            <div class="emergency-container">
+                <!-- Left: Hotline Directory -->
+                <div class="hotline-panel">
+                    <h2>Nomor Darurat Indonesia</h2>
+                    <p>Simpan nomor-nomor penting ini di ponsel Anda. Ingat, hubungi saat benar-benar darurat.</p>
+                    
+                    <div class="hotline-grid">
+                        <a href="tel:112" class="hotline-card pulse-light">
+                            <div class="hotline-info">
+                                <span class="hotline-label">Panggilan Darurat Umum</span>
+                                <span class="hotline-num">112</span>
+                            </div>
+                            <div class="hotline-call-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                        </a>
+
+                        <a href="tel:119" class="hotline-card">
+                            <div class="hotline-info">
+                                <span class="hotline-label">Ambulans / Kemenkes</span>
+                                <span class="hotline-num">118 / 119</span>
+                            </div>
+                            <div class="hotline-call-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                        </a>
+
+                        <a href="tel:110" class="hotline-card">
+                            <div class="hotline-info">
+                                <span class="hotline-label">Kepolisian RI</span>
+                                <span class="hotline-num">110</span>
+                            </div>
+                            <div class="hotline-call-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                        </a>
+
+                        <a href="tel:113" class="hotline-card">
+                            <div class="hotline-info">
+                                <span class="hotline-label">Pemadam Kebakaran</span>
+                                <span class="hotline-num">113</span>
+                            </div>
+                            <div class="hotline-call-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="telephony-guide">
+                        <h4>Etika Saat Menghubungi Nomor Darurat:</h4>
+                        <ol>
+                            <li>Tetap tenang dan bicaralah dengan jelas.</li>
+                            <li>Sebutkan <strong>Lokasi Kejadian</strong> secara spesifik (nama jalan, patokan).</li>
+                            <li>Jelaskan singkat <strong>Apa yang terjadi</strong> dan jumlah korban.</li>
+                            <li>Laporkan kondisi kesadaran korban (cth: "Korban bernapas tapi pingsan").</li>
+                            <li>Jangan tutup telepon sebelum petugas selesai mencatat informasi.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Right: P3K Checklist Box -->
+                <div class="checklist-panel">
+                    <h2>Ceklist Kotak P3K Mandiri</h2>
+                    <p>Apakah kotak P3K Anda sudah siap menghadapi keadaan darurat? Centang perlengkapan yang sudah Anda miliki di bawah ini.</p>
+                    
+                    <div class="checklist-items">
+                        <label class="checklist-item">
+                            <input type="checkbox" id="item-1">
+                            <span class="custom-checkbox"></span>
+                            <span class="item-text">Kasa Steril & Perban (Menutup luka)</span>
+                        </label>
+                        
+                        <label class="checklist-item">
+                            <input type="checkbox" id="item-2">
+                            <span class="custom-checkbox"></span>
+                            <span class="item-text">Plester Aneka Ukuran (Luka kecil)</span>
+                        </label>
+                        
+                        <label class="checklist-item">
+                            <input type="checkbox" id="item-3">
+                            <span class="custom-checkbox"></span>
+                            <span class="item-text">Cairan Antiseptik / Povidone Iodine</span>
+                        </label>
+
+                        <label class="checklist-item">
+                            <input type="checkbox" id="item-4">
+                            <span class="custom-checkbox"></span>
+                            <span class="item-text">Gunting & Pinset Medis</span>
+                        </label>
+
+                        <label class="checklist-item">
+                            <input type="checkbox" id="item-5">
+                            <span class="custom-checkbox"></span>
+                            <span class="item-text">Sarung Tangan Lateks (Mencegah kontaminasi)</span>
+                        </label>
+
+                        <label class="checklist-item">
+                            <input type="checkbox" id="item-6">
+                            <span class="custom-checkbox"></span>
+                            <span class="item-text">Masker Medis & Alkohol Swab</span>
+                        </label>
+
+                        <label class="checklist-item">
+                            <input type="checkbox" id="item-7">
+                            <span class="custom-checkbox"></span>
+                            <span class="item-text">Mitela (Kain segitiga pembalut patah tulang)</span>
+                        </label>
+                    </div>
+
+                    <div class="checklist-status">
+                        <div class="status-bar-container">
+                            <div class="status-bar-fill" id="checklist-progress" style="width: 0%;"></div>
+                        </div>
+                        <p class="status-text"><span id="checklist-count">0</span> dari 7 perlengkapan siap.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <a href="#" class="logo" style="margin-bottom: 1rem; display: inline-flex;">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="url(#logo-grad-footer)"/>
+                        <path d="M12 7v6M9 10h6" stroke="var(--logo-cross, #FFFFFF)" stroke-width="2" stroke-linecap="round"/>
+                        <defs>
+                            <linearGradient id="logo-grad-footer" x1="2" y1="3" x2="22" y2="21" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="var(--logo-stop1, #00F5D4)"/>
+                                <stop offset="1" stop-color="var(--logo-stop2, #00B4D8)"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span>Bantu<span class="highlight">Cepat</span></span>
+                </a>
+                <p>Website literasi pertolongan pertama pada kecelakaan dengan empati dan etika penolong.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#panduan">Panduan P3K</a>
+                <a href="#etika">Etika & Empati</a>
+                <a href="#simulator">Simulator Kuis</a>
+                <a href="#kontak">Hotline</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BantuCepat. Dibuat oleh TIM EMPATI | Institut Teknologi Sumatera.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Guide Modal (Universal overlay) -->
+    <div id="guide-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeGuideModal()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            
+            <div class="modal-header">
+                <div class="modal-badge urgent" id="modal-badge">Sangat Penting</div>
+                <h2 id="modal-title">Pingsan & RJP (Henti Jantung)</h2>
+            </div>
+            
+            <!-- Tabs Navigation -->
+            <div class="modal-tabs">
+                <button class="tab-btn-modal active" id="tab-btn-medis" onclick="switchModalTab('medis')">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                    </svg>
+                    Langkah Medis
+                </button>
+                <button class="tab-btn-modal" id="tab-btn-etika" onclick="switchModalTab('etika')">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    Etika & Empati
+                </button>
+            </div>
+            
+            <!-- Tabs Content -->
+            <div class="modal-body">
+                <!-- Medis Tab Content -->
+                <div id="modal-tab-medis" class="tab-content">
+                    <ol class="step-list" id="modal-steps-medis">
+                        <!-- Loaded dynamically -->
+                    </ol>
+                </div>
+                
+                <!-- Etika Tab Content -->
+                <div id="modal-tab-etika" class="tab-content hidden">
+                    <ul class="step-list-bullet" id="modal-steps-etika">
+                        <!-- Loaded dynamically -->
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="closeGuideModal()">Tutup Panduan</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Link -->
+    <script src="script.js"></script>
+</body>
+</html>
