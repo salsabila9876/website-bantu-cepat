@@ -1,0 +1,11 @@
+{
+  "name": "bantu-cepat",
+  "version": "1.0.0",
+  "description": "Website informatif pertolongan pertama dan etika darurat",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y http-server -p 8080"
+  },
+  "author": "BantuCepat Team",
+  "license": "ISC"
+}
